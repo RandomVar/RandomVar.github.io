@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F01%2F24%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Hexo日常使用指南更新博客内容的操作hexo new title //新建博文shexo clean //清除缓存hexo g //生成静态文件hexo s //启动Hexo本地服务器 Next主题配置参考博文 Hexo的Next主题详细配置]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Hexo日常使用指南更新博客内容的操作hexo new title //新建博文shexo clean //清除缓存hexo g //生成静态文件hexo s //启动Hexo本地服务器hexo d //部署 Next主题配置参考博文 Hexo的Next主题详细配置]]></content>
       <tags>
         <tag>博客搭建</tag>
       </tags>
