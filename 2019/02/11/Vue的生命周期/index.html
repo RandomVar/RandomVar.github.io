@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Vue,Day Day Up,">
 
 
 
@@ -79,14 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="关于Vue生命周期的理解，但应该有很多地方不严谨，也可能出现理解方面的偏差。">
+<meta name="keywords" content="Vue,Day Day Up">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue的生命周期">
+<meta property="og:url" content="http://yoursite.com/2019/02/11/Vue的生命周期/index.html">
 <meta property="og:site_name" content="RandomVar">
+<meta property="og:description" content="关于Vue生命周期的理解，但应该有很多地方不严谨，也可能出现理解方面的偏差。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-13T09:14:28.007Z">
+<meta property="og:image" content="https://cn.vuejs.org/images/lifecycle.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/1064935/201701/1064935-20170103211421987-2119701214.png">
+<meta property="og:updated_time" content="2019-02-13T13:58:28.658Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="Vue的生命周期">
+<meta name="twitter:description" content="关于Vue生命周期的理解，但应该有很多地方不严谨，也可能出现理解方面的偏差。">
+<meta name="twitter:image" content="https://cn.vuejs.org/images/lifecycle.png">
 
 
 
@@ -116,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/11/Vue的生命周期/">
 
 
 
 
 
-  <title>分类 | RandomVar</title>
+  <title>Vue的生命周期 | RandomVar</title>
   
 
 
@@ -279,40 +286,242 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/Vue的生命周期/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RandomVar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RandomVar">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 3 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Vue的生命周期</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:01:11+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-13T21:58:28+08:00">
+                2019-02-13
+              </time>
+            
+          </span>
+         
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>关于Vue生命周期的理解，但应该有很多地方不严谨，也可能出现理解方面的偏差。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="生命周期"><a class="header-anchor" href="#生命周期"></a>生命周期</h2>
+<h3 id="beforecreate-created"><a class="header-anchor" href="#beforecreate-created"></a>beforeCreate~created</h3>
+<p>完成初始化事件，创建实例，绑定属性<br>
+<code>$el</code> 属性目前不可见</p>
+<h3 id="created-beforemount"><a class="header-anchor" href="#created-beforemount"></a>created~beforeMount</h3>
+<ul>
+<li>判断对象是否有el选项。如果有的话就继续向下编译，如果没有el选项，则停止编译，直到在该vue实例上调用vm.$mount(el)（手动挂载实例）</li>
+<li>如果有template则编译template，否则编译外部html</li>
+<li>此阶段完成了el的初始化,有了<strong>虚拟的dom</strong></li>
+</ul>
+<h3 id="beforemount-mounted"><a class="header-anchor" href="#beforemount-mounted"></a>beforeMount~mounted</h3>
+<p>模板编译/挂载(create vm.$el and replace “el” with it)</p>
+<p>用编译好的html替换vue实例上el属性指向的dom对象或替换对应html标签里面的内容</p>
+<p>虚拟dom变成真实dom,这里可以发送http请求页面初始化需要的数据</p>
+<h3 id="beforeupdate-update"><a class="header-anchor" href="#beforeupdate-update"></a>beforeUpdate~update</h3>
+<p>数据发生变化-&gt;beforeUpdate(此时数据已经更新)-&gt;重新渲染虚拟DOM，再给对应位置的真是DOM打补丁（VirtualDOM re-render and patch） -&gt;update</p>
+<h3 id="beforedestroy-destroyed"><a class="header-anchor" href="#beforedestroy-destroyed"></a>beforeDestroy~destroyed</h3>
+<p>beforeDestory：实例被销毁之前执行<br>
+Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</p>
+<p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="avatar"><br>
+<img src="https://images2015.cnblogs.com/blog/1064935/201701/1064935-20170103211421987-2119701214.png" alt="avatar"><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h2 id="相关知识"><a class="header-anchor" href="#相关知识"></a>相关知识</h2>
+<h3 id="el挂载点"><a class="header-anchor" href="#el挂载点"></a>el挂载点</h3>
+<blockquote>
+<p>el提供的元素只能作为挂载点。不同于 Vue 1.x，所有的挂载元素会被 Vue 生成的 DOM 替换。因此不推荐挂载 root 实例到 <code>&lt;html&gt;</code> 或者 <code>&lt;body&gt;</code> 上。</p>
+</blockquote>
+<p>如果你选了某一个元素作为挂载点，例如el:’#app’，那么id=&quot;app&quot;的这个元素只能被用来作为挂载点，表现为，无论你在该元素内写什么，最终都会被替换掉，不会显示出来。因此如果挂载到这两个元素上，页面就会没<code>&lt;html&gt;</code>标签或者<code>&lt;body&gt;</code>标签<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<h3 id="render函数"><a class="header-anchor" href="#render函数"></a>render函数</h3>
+<p>render函数是渲染一个视图，然后提供给el挂载</p>
+<p><strong>vue.2.0的渲染过程</strong>：</p>
+<p>1.首先需要了解这是 es 6 的语法，表示 Vue 实例选项对象的 render 方法作为一个函数，接受传入的参数 h 函数，返回 h(App) 的函数调用结果。</p>
+<p>2.其次，Vue 在创建 Vue 实例时，通过调用 render 方法来渲染实例的 DOM 树。</p>
+<p>3.最后，Vue 在调用 render 方法时，会传入一个 createElement 函数作为参数，也就是这里的 h 的实参是 createElement 函数，然后 createElement 会以 APP 为参数进行调用<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
+<p>可以直接调用render函数createElement,调用优先于template</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">render: function(createElement) &#123;</span><br><span class="line">       return createElement(&apos;h1&apos;, &apos;this is createElement&apos;)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="服务端上的生命周期"><a class="header-anchor" href="#服务端上的生命周期"></a>服务端上的生命周期<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></h3>
+<p>由于没有动态更新，所有的生命周期钩子函数中，只有 beforeCreate 和 created 会在服务器端渲染 (SSR) 过程中被调用。这就是说任何其他生命周期钩子函数中的代码（例如 beforeMount 或 mounted），只会在客户端执行。</p>
+<h2 id="参考资料"><a class="header-anchor" href="#参考资料"></a>参考资料</h2>
+<p><a href="https://segmentfault.com/a/1190000011381906?utm_source=tag-newest" target="_blank" rel="noopener">详解vue生命周期</a><br>
+<a href="https://segmentfault.com/a/1190000008010666" target="_blank" rel="noopener">Vue2.0 探索之路——生命周期和钩子函数的一些理解</a><br>
+<a href="https://blog.csdn.net/jian_xi/article/details/79249300" target="_blank" rel="noopener">个人理解的VueJS生命周期以及其中钩子函数的实际应用</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="http://www.cnblogs.com/gagag/p/6246493.html" target="_blank" rel="noopener">Vue生命周期</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://segmentfault.com/q/1010000012520601/" target="_blank" rel="noopener">vue的选项的el疑惑</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://www.cnblogs.com/whkl-m/p/6970859.html" target="_blank" rel="noopener">Vue2.0 render:h =&gt; h(App)</a> <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p><a href="https://ssr.vuejs.org/zh/guide/universal.html#%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">编写通用代码 | Vue SSR 指南</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/24/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/11/javascript的闭包和回调函数/" rel="prev" title="javascript的闭包和回调函数">
+                javascript的闭包和回调函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -321,6 +530,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -341,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -404,6 +626,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">1.</span> <span class="nav-text">生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#beforecreate-created"><span class="nav-number">1.1.</span> <span class="nav-text">beforeCreate~created</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#created-beforemount"><span class="nav-number">1.2.</span> <span class="nav-text">created~beforeMount</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beforemount-mounted"><span class="nav-number">1.3.</span> <span class="nav-text">beforeMount~mounted</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beforeupdate-update"><span class="nav-number">1.4.</span> <span class="nav-text">beforeUpdate~update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beforedestroy-destroyed"><span class="nav-number">1.5.</span> <span class="nav-text">beforeDestroy~destroyed</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关知识"><span class="nav-number">2.</span> <span class="nav-text">相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#el挂载点"><span class="nav-number">2.1.</span> <span class="nav-text">el挂载点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#render函数"><span class="nav-number">2.2.</span> <span class="nav-text">render函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端上的生命周期"><span class="nav-number">2.3.</span> <span class="nav-text">服务端上的生命周期[4]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
