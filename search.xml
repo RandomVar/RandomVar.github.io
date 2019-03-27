@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js捕获和冒泡]]></title>
+    <url>%2F2019%2F03%2F27%2Fjs%E6%8D%95%E8%8E%B7%E5%92%8C%E5%86%92%E6%B3%A1%2F</url>
+    <content type="text"><![CDATA[概念[1] 事件捕获（event capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。 事件冒泡（dubbed bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。 dom标准事件流的触发的先后顺序为：先捕获再冒泡 事件处理函数 addEventListener addEventListener(event, listener, useCapture) event:需要绑定的事件（事件名称，如click，不带on） listener:事件监听函数 useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函数;如果参数为true，则表示在事件捕获阶段调用处理函数。 e.stopPropagation(); 阻止冒泡 事件捕获和事件冒泡一起存在[2] 当事件捕获和事件冒泡一起存在的情况，事件又是如何触发呢。 这里记被点击的DOM节点为target节点 document 往 target节点，捕获前进，遇到注册的捕获事件立即触发执行 到达target节点，触发事件（对于target节点上，是先捕获还是先冒泡则捕获事件和冒泡事件的注册顺序，先注册先执行） target节点 往 document 方向，冒泡前进，遇到注册的冒泡事件立即触发 JavaScript 详说事件机制之冒泡、捕获、传播、委托 ↩ JS中事件冒泡与捕获 ↩]]></content>
+      <categories>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>Day Day Up</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[仿网易云音乐图片轮播效果]]></title>
+    <url>%2F2019%2F03%2F27%2F%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C%2F</url>
+    <content type="text"><![CDATA[技术点 父子组件通信 通过props传递数据 子组件 12345props: &#123;//需要获取的数据 width: &#123; type: Number &#125;&#125; 父组件 1234567data () &#123; return &#123; setting: &#123; width: 1000 &#125; &#125;&#125; 绝对定位 绝对定位脱离标准流，所以父元素一般要设定宽高 图片滤镜效果filter filter:brightness(0.3)图片变亮变暗 图片切换效果 transition: 500ms all ease-in-out;持续时间/为所有属性设置变换效果/效果为以慢速开始和结束的过渡效果 bug 样式重叠,上层是透明元素,下层元素可见,但会出现无法点击的效果 github地址 https://github.com/RandomVar/Image-Rotation-Conponent]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ajax和CORS跨域]]></title>
+    <url>%2F2019%2F03%2F25%2Fajax%E5%92%8CCORS%E8%B7%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[What’s ajax In a traditional web page you can’t update small portion without reloading page. So here Ajax is help us to background server calls for fetching data and update new contain without reloading page. Advantages 不用刷新页面，数据与界面分离 异步通信 负载均衡，按需取数据 This object allows you to making HTTP requests and receive responses from the server in the background, without requiring the user to submit the page to the server (without round trip process). Using DOM to manipulate received data from the server and make responsive contents are added into live page without user/visual interruptions. Disadvantages search engines would not be able to index an AJAX application 无法跨域 对于html5，可以使用CORS实现跨域 开发者会暴露一定数据和服务器逻辑 How to work Client side user perform action to generate event that event call to a JavaScript function. JavaScript function create XMLHttpRequest object, XMLHttpRequest object specify the JavaScript callback function. JavaScript XMLHttpRequest object call as a asynchronous HTTP request to the Server. Web Server process the request and return XML contain data. XMLHttpRequest object calls to a callback function along with response from the web server. Client browser updates the HTML DOM representing the web page along with new data. Usage Define instance of this XMLHttpRequest object var xhr = new XMLHttpRequest(); Initialize open() method xhr.open(&quot;GET&quot;, &quot;demo_textfile.txt&quot;, true); Specifies the HTTP method. Valid value GET, POST, HEAD, PUT, DELETE, OPTIONS Specifies URL. Specifies whether the request should be handled asynchronously or not. Request send using send() method xhr.send(); onreadystatechange Event To Set Callback Function Using onreadystatechange event to set callback (handler) function to be executed when the status of the request changes 1234//Response text received from server that data assign into textarea tag using DOM.xhr.onreadystatechange = function()&#123; document.getElementById(&quot;textArea&quot;).value = xhr.responseText; &#125;; readyState 123if (xhr.readyState == xhr.DONE) &#123; alert(xhr.responseText); &#125; status 200 OK 403 Forbidden 服务器已经理解请求，但是拒绝执行它。 404 Not Found 请求失败，请求所希望得到的资源未被在服务器上发现 408 Request Timeout 请求超时。 500 Internal Server Error 服务器遇到了不知道如何处理的情况。 123if ((xhr.status == 200) || (xhr.status == 0))&#123; alert(xhr.status); &#125; CORS跨域 (Cross-origin resource sharing) 简单请求 简单请求要满足： 请求方法是以下三种方法之一：HEAD;GET;POST HTTP的头信息不超出以下几种字段： Accept;Accept-Language;Content-Language;Last-Event-ID; Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain 浏览器发送请求 123456GET /cors HTTP/1.1Origin: http://api.bob.com //本次请求来自哪个源（协议 + 域名 + 端口）Host: api.alice.comAccept-Language: en-USConnection: keep-aliveUser-Agent: Mozilla/5.0... 如果Origin指定的源，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含Access-Control-Allow-Origin字段（详见下文），就知道出错了，从而抛出一个错误，被XMLHttpRequest的onerror回调函数捕获。注意，这种错误无法通过状态码识别，因为HTTP回应的状态码有可能是200。 服务端响应字段 Access-Control-Allow-Origin 它的值要么是请求时Origin字段的值，要么是一个*，表示接受任意域名的请求。 Access-Control-Allow-Credentials: true 表示是否允许发送Cookie Access-Control-Expose-Headers: FooBar 指定额外字段FooBar Content-Type: text/html; charset=utf-8 非简单请求 浏览器发现，这是一个非简单请求，就自动发出一个&quot;预检&quot;请求，要求服务器确认可以这样请求。 &quot;预检&quot;请求用的请求方法是OPTIONS，表示这个请求是用来询问的。 预检请求额外包含的两个方法： （1）Access-Control-Request-Method 列出浏览器的CORS请求会用到哪些HTTP方法。 （2）Access-Control-Request-Headers 指定浏览器CORS请求会额外发送的头信息字段 预检请求的回应 服务器收到&quot;预检&quot;请求以后，检查了Origin、Access-Control-Request-Method和Access-Control-Request-Headers字段以后，确认允许跨源请求，就可以做出回应。 如果浏览器否定了&quot;预检&quot;请求，会返回一个正常的HTTP回应，但是没有任何CORS相关的头信息字段。这时，浏览器就会认定，服务器不同意预检请求，因此触发一个错误。 预检请求同意后就可以发送正常请求 参考资料 AJAX way2tutorial 跨域资源共享 CORS 详解 其他资料 CORS 简单请求+预检请求（彻底理解跨域）]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Day Day Up</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[阅读过的文章合集]]></title>
+    <url>%2F2019%2F03%2F23%2F%E9%98%85%E8%AF%BB%E8%BF%87%E7%9A%84%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[CSS篇 Better Layouts Through CSS Flexbox CSS flexbox的实例，实例中有的animation等也很棒 开发篇 登录那些事儿]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[浏览器渲染]]></title>
+    <url>%2F2019%2F03%2F02%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%2F</url>
+    <content type="text"><![CDATA[看了一篇博客，并且懒得翻译 解析HTML,CSS,JS文件流程 浏览器读取原始字节（Bytes） the browser reads the raw bytes of HTML from your hard disk (or network) 原始字节（Bytes） =&gt; 字符（Characters） Firstly, the raw bytes of data are converted into characters. 字符（Characters） =&gt; 标记（tokens） An html file is broken down into small units of parsing called tokens. 标记（tokens） =&gt; 节点（node） After the tokenization is done, the tokens are then converted into nodes. 节点（node） =&gt; DOM The relationship between every node is established in this DOM object. 对于html来说建立了DOM，而对CSS来说则有CSSOM there’s also a CSS tree structure called the CSS Object Model, CSSOM for short. 加入CSS后的解析 当解析到css引入标签的时候，开始获取css文件 As soon the browser begins to parse the html, upon finding a link tag to a css file, it simultaneously makes a request to fetch that. 浏览器必须按CSS tree递归解析元素样式，因为会有一些继承父级元素的样式 Rhe browser has to recursively go through the CSS tree structure and determine the styles that affect a particular element. DOM + CSSOM = render tree The browser now combines the DOM and CSSOM trees into something called a render tree. render tree是DOM + CSSOM的结果，因此如果DOM节点元素在CSS中被隐藏了，它不会出现在render tree中 Note that if an element as been hidden by CSS e.g. by using display; none, the node will not be represented in the render tree. The hidden element will be present in the DOM but not the render tree. 重排（reflow） 计算元素在页面的布局位置 takes into consideration the content and style received from the DOM and CSSOM and does all the necessary layout computing. 绘图 “paints” the individual node to the screen. render blocking resources The DOM and CSSOM must be constructed before a successful paint, so both HTML and CSS are render blocking resources. DOM构建和CSS获取解析可同时进行 As soon as the parser reaches the line with &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; , a request is made to fetch the CSS file, style.css The DOM construction continues, and as soon as the CSS file returns with some content, the CSSOM construction begins. 加入JavaScript后的解析 遇到script标签则DOM构建暂停，直到script执行结束。因为JavaScript可以改变整个DOM和CSSOM Well, one of the most important things to remember is that whenever the browser encounters a script tag, the DOM construction is paused! The entire DOM construction process is halted until the script finishes executing. This is because JavaScript can alter both the DOM and CSSOM. Since the browser isn’t sure what this particular Javascript will do, it takes precaution by halting the entire DOM construction all together. 如果js在执行过程中遇到还未建立的css元素会停下来知道CSSOM构建完毕 So, what happens when the parser encounters a script tag but the CSSOM isn’t ready yet? The Javascript execution will be halted until the CSSOM is ready. 可以加入async参数使得DOM的构造不会因此停下来 If you add the async keyword to the script tag, the DOM construction will not be halted. &lt;script src=&quot;https://some-link-to-app.js&quot; async&gt;&lt;/script&gt; 关键渲染路径 critical rendering path All this while we have discussed the steps taken between receiving the HTML, CSS and JS bytes and turning them into rendered pixels on the screen. This entire process is called the critical rendering path. 参考博客： How browser rendering works — behind the scenes]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js中的异步操作]]></title>
     <url>%2F2019%2F02%2F11%2Fjs%E4%B8%AD%E7%9A%84%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[同步与异步 同步(Synchronous)：调用一旦开始，调用者必须等到方法调用返回后，才能继续后续的行为。 异步(Asynchronous)： 一旦开始，方法调用就会立即返回，调用者就可以继续后续的操作。[1] 关于JS javascript是一门单线程语言，一切javascript版的&quot;多线程&quot;都是用单线程模拟出来的。 ES6语法：Promise[2] Promise的用法 123456789101112131415function A(resolve,reject)&#123; if()&#123; resolve() &#125; else&#123; reject() &#125;&#125;var p1 = new Promise(A);var p2 = p1.then(function S() &#123; console.log(&apos;成功：&apos;);&#125;);// 如果成功，执行这个函数：var p3 = p2.catch(function F() &#123; console.log(&apos;失败：&apos;);&#125;);// 当A函数执行失败时 简化if-else逻辑 1job1.then(job2).then(job3).catch(handleError); 其中，job1、job2和job3都是Promise对象。 Promise.all 12345678910var p1 = new Promise(function (resolve, reject) &#123; setTimeout(resolve, 500, &apos;P1&apos;);&#125;);var p2 = new Promise(function (resolve, reject) &#123; setTimeout(resolve, 600, &apos;P2&apos;);&#125;);// 同时执行p1和p2，并在它们都完成后执行then:Promise.all([p1, p2]).then(function (results) &#123; console.log(results); // 获得一个Array: [&apos;P1&apos;, &apos;P2&apos;]&#125;); p1、p2可以同时执行 Promise.race 123456789var p1 = new Promise(function (resolve, reject) &#123; setTimeout(resolve, 500, &apos;P1&apos;);&#125;);var p2 = new Promise(function (resolve, reject) &#123; setTimeout(resolve, 600, &apos;P2&apos;);&#125;);Promise.race([p1, p2]).then(function (result) &#123; console.log(result); &#125;); p1,p2只要一个成功执行，就可以继续执行then ES7语法：async-await[3] async-await的使用 async async用来表示函数是异步的，定义的函数会返回一个promise对象，可以使用then方法添加回调函数。 123456async function demo01() &#123; return 123;//相当于Promise.resolve(123)&#125;demo01().then(val =&gt; &#123; console.log(val);// 123&#125;); await await 必须出现在 async 函数内部，不能单独使用。 await的可以是普通函数也可以是promise，promise要等resolve了才能进行 12345678910111213function sleep(second, param) &#123; return new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123; resolve(param); &#125;, second); &#125;)&#125;async function test() &#123; await sleep(2000, &apos;req01&apos;); await sleep(1000, &apos;req02&apos;); await sleep(500, &apos;req03&apos;);&#125; 处理reject 12345678async function errorDemoSuper() &#123; try &#123; let result = await sleep(1000); console.log(result); &#125; catch (err) &#123; console.log(err); &#125;&#125; 使用try-catch结构 可能会遇到的bug 123456async function forBugDemo() &#123; let arr = [1, 2, 3, 4, 5]; arr.forEach(item =&gt; &#123; await item; &#125;);&#125; 上面代码会报错，因为 await 用在普通函数之中了 JS的执行机制[4] 执行机制 同步和异步任务分别进入不同的执行&quot;场所&quot;，同步的进入主线程，异步的进入Event Table并注册函数。 当指定的事情完成时，Event Table会将这个函数移入Event Queue。 主线程内的任务执行完毕为空，会去Event Queue读取对应的函数，进入主线程执行 1234setTimeout(() =&gt; &#123; task()&#125;,3000)sleep(10000000) 执行步骤 task()进入Event Table并注册,计时开始。 执行sleep函数，很慢，非常慢，计时仍在继续。 3秒到了，计时事件timeout完成，task()进入Event Queue，等待sleep执行完毕。 sleep终于执行完了，task()终于从Event Queue进入了主线程执行。 setInterval setInterval会每隔指定的时间将注册的函数置入Event Queue 宏任务与微任务 任务可以分为 macro-task(宏任务)：包括整体代码script，setTimeout，setInterval的回调函数 micro-task(微任务)：Promise，process.nextTick的回调函数 js先执行所有当前队列中的宏任务，接着执行所有当前队列中的微任务。再执行所有当前队列中的宏任务，接着执行所有当前队列中的微任务……一直循环 示例 12345678new Promise(function(resolve) &#123; console.log(&apos;promise&apos;); resolve()&#125;).then(function() &#123; console.log(&apos;then&apos;);&#125;)console.log(&apos;console&apos;); 结果为promise,console,then promise resolve后then中的任务进入微任务队列 同步(Synchronous)和异步(Asynchronous) ↩ Promise - 廖雪峰的官方网站 ↩ ES6系列文章 异步神器async-await - 一步前端 - SegmentFault 思否 ↩ 这一次，彻底弄懂 JavaScript 执行机制 - 掘金 ↩]]></content>
@@ -32,8 +88,8 @@
         <category>Vue</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
         <tag>Day Day Up</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>

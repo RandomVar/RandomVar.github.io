@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Day Day Up,javascript,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="RandomVar">
-<meta property="og:url" content="http://yoursite.com/tags/博客搭建/index.html">
+<meta name="description" content="概念[1]   事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。   事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。   dom标准事件流的触发的先后顺序">
+<meta name="keywords" content="Day Day Up,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js捕获和冒泡">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/js捕获和冒泡/index.html">
 <meta property="og:site_name" content="RandomVar">
+<meta property="og:description" content="概念[1]   事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。   事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。   dom标准事件流的触发的先后顺序">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-27T10:08:39.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RandomVar">
+<meta name="twitter:title" content="js捕获和冒泡">
+<meta name="twitter:description" content="概念[1]   事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。   事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。   dom标准事件流的触发的先后顺序">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/博客搭建/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/27/js捕获和冒泡/">
 
 
 
 
 
-  <title>标签: 博客搭建 | RandomVar</title>
+  <title>js捕获和冒泡 | RandomVar</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -276,52 +281,227 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>博客搭建<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/js捕获和冒泡/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RandomVar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RandomVar">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/01/24/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">js捕获和冒泡</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-24T22:30:45+08:00" content="2019-01-24">
-          01-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T16:38:06+08:00">
+                2019-03-27
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T18:08:39+08:00">
+                2019-03-27
+              </time>
+            
+          </span>
+         
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概念"><a class="header-anchor" href="#概念"></a>概念<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
+<ul>
+<li>
+<p>事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始<strong>由外到内</strong>进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。</p>
+</li>
+<li>
+<p>事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是<strong>由内到外</strong>进行事件传播，直到根节点。</p>
+</li>
+<li>
+<p>dom标准事件流的触发的先后顺序为：先捕获再冒泡</p>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="事件处理函数"><a class="header-anchor" href="#事件处理函数"></a>事件处理函数</h2>
+<h3 id="addeventlistener"><a class="header-anchor" href="#addeventlistener"></a>addEventListener</h3>
+<p>addEventListener(event, listener, useCapture)　　<br>
+event:需要绑定的事件（事件名称，如click，不带on）<br>
+listener:事件监听函数<br>
+useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函数;如果参数为true，则表示在事件捕获阶段调用处理函数。</p>
+<h3 id="e-stoppropagation"><a class="header-anchor" href="#e-stoppropagation"></a>e.stopPropagation();</h3>
+<p>阻止冒泡</p>
+<h2 id="事件捕获和事件冒泡一起存在"><a class="header-anchor" href="#事件捕获和事件冒泡一起存在"></a>事件捕获和事件冒泡一起存在<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h2>
+<p>当事件捕获和事件冒泡一起存在的情况，事件又是如何触发呢。<br>
+这里记被点击的DOM节点为target节点</p>
+<ul>
+<li>
+<p>document 往 target节点，捕获前进，遇到注册的捕获事件立即触发执行</p>
+</li>
+<li>
+<p>到达target节点，触发事件（对于target节点上，是先捕获还是先冒泡则捕获事件和冒泡事件的注册顺序，先注册先执行）</p>
+</li>
+<li>
+<p>target节点 往 document 方向，冒泡前进，遇到注册的冒泡事件立即触发</p>
+</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.cnblogs.com/bfgis/p/5460191.html" target="_blank" rel="noopener">JavaScript 详说事件机制之冒泡、捕获、传播、委托</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://segmentfault.com/a/1190000005654451" target="_blank" rel="noopener">JS中事件冒泡与捕获</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/27/仿网易云音乐图片轮播效果/" rel="next" title="仿网易云音乐图片轮播效果">
+                <i class="fa fa-chevron-left"></i> 仿网易云音乐图片轮播效果
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +509,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -349,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -412,6 +605,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念[1]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理函数"><span class="nav-number">2.</span> <span class="nav-text">事件处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addeventlistener"><span class="nav-number">2.1.</span> <span class="nav-text">addEventListener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-stoppropagation"><span class="nav-number">2.2.</span> <span class="nav-text">e.stopPropagation();</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件捕获和事件冒泡一起存在"><span class="nav-number">3.</span> <span class="nav-text">事件捕获和事件冒泡一起存在[2]</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -552,6 +761,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
