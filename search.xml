@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cookie存储购物车信息]]></title>
+    <url>%2F2019%2F03%2F28%2Fcookie%E5%AD%98%E5%82%A8%E8%B4%AD%E7%89%A9%E8%BD%A6%E4%BF%A1%E6%81%AF%2F</url>
+    <content type="text"><![CDATA[Cookie 直接使用document.cookie设置或者获取cookie,cookie格式为键值对 清空购物车 将购物车中内容清空并且清除cookie 清除cookie的方法是直接设置cookie的到期时间为一个早于当前时间的时间。 123var now=new Date();now.setDate(now.getDate()-7);document.cookie=&apos;cartlist=xx;expires=&apos; + now; 添加商品 window.event.target获取被点击的元素。 添加addEventListener监听点击事件，更新cookie DOM操作 tagName获取元素的标签 parentElement获取父元素 children获取所有子元素 getAttribute('data-guid')获取data-guid属性值 setAttribute('data-guid')设置data-guid属性值 nextElementSibling 返回指定元素之后的下一个兄弟元素（不包括文本节点、注释节点） location.reload() 刷新页面 向表格插入新行 12345var x=document.getElementById(&apos;myTable&apos;).insertRow(0)//insertRow参数为插到第几行 var y=x.insertCell(0) var z=x.insertCell(1) y.innerHTML=&quot;NEW CELL1&quot; z.innerHTML=&quot;NEW CELL2&quot; 插入新节点 1234var h=document.createElement(&quot;H1&quot;);//创建 &quot;H1&quot; 元素var t=document.createTextNode(&quot;Hello World&quot;);//创建一个文本节点h.appendChild(t);document.body.appendChild(h); Demo cookie和session 理解Cookie和Session机制]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js捕获和冒泡]]></title>
     <url>%2F2019%2F03%2F27%2Fjs%E6%8D%95%E8%8E%B7%E5%92%8C%E5%86%92%E6%B3%A1%2F</url>
     <content type="text"><![CDATA[概念[1] 事件捕获（event capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。 事件冒泡（dubbed bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。 dom标准事件流的触发的先后顺序为：先捕获再冒泡 事件处理函数 addEventListener addEventListener(event, listener, useCapture) event:需要绑定的事件（事件名称，如click，不带on） listener:事件监听函数 useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函数;如果参数为true，则表示在事件捕获阶段调用处理函数。 e.stopPropagation(); 阻止冒泡 事件捕获和事件冒泡一起存在[2] 当事件捕获和事件冒泡一起存在的情况，事件又是如何触发呢。 这里记被点击的DOM节点为target节点 document 往 target节点，捕获前进，遇到注册的捕获事件立即触发执行 到达target节点，触发事件（对于target节点上，是先捕获还是先冒泡则捕获事件和冒泡事件的注册顺序，先注册先执行） target节点 往 document 方向，冒泡前进，遇到注册的冒泡事件立即触发 JavaScript 详说事件机制之冒泡、捕获、传播、委托 ↩ JS中事件冒泡与捕获 ↩]]></content>
       <categories>
-        <category>javaScript</category>
+        <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>
@@ -64,8 +76,8 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>
@@ -76,8 +88,8 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>
