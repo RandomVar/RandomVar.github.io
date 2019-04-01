@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JS立即执行函数表达式(IIFE)]]></title>
+    <url>%2F2019%2F03%2F31%2FJS%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F-IIFE%2F</url>
+    <content type="text"><![CDATA[引入 JavaScript可以创建一个函数的很多实例，函数的内部变量在不同的实例之中是没有关联的。 但有时候，我们不想要很多的实例，只需要执行该函数一次即可。 问题 我们使用var foo = function(){ /* code */ }定义函数，再使用foo()执行函数。 那我们不如直接function(){ /* code */ }()吧？ 不好意思，报错SyntaxError: Unexpected token ( 因为编译器看到function之后就把语句作为函数定义(function declaration)解析，而非函数表达式(function expression) It sees what it thinks to be a function declaration without a name and throws a SyntaxError exception because function declarations require a name. 题外话 function foo(){ /* code */ }();这么写是错的 function foo(){ /* code */ }( 1 );这么写会被当做函数定义 ，括号则被当作优先级标识，先执行括号内的内容 IIFE 在函数外面加一个括号就会被解析为函数表达式了。 两种方法(function(){ /* code */ }()),(function(){ /* code */ })() 如果函数be expected是一个表达式，也会被解析成一个表达式,如： 123var i = function()&#123; return 10; &#125;();true &amp;&amp; function()&#123; /* code */ &#125;();0, function()&#123; /* code */ &#125;(); 如果函数的返回值没有用，可以直接在函数前面加个!,~,-,+之类的运算符，让他直接被解析为表达式，方便阅读。 比如说!function(){ /* code */ }(); 应用（Saving state with closures） 使用立即执行函数可解决闭包问题。详见javascript的闭包和回调函数 JS的模块化 1234567891011121314151617181920212223242526272829303132333435// Create an anonymous function expression that gets invoked immediately,// and assign its *return value* to a variable. This approach &quot;cuts out the// middleman&quot; of the named `makeWhatever` function reference.// // As explained in the above &quot;important note,&quot; even though parens are not// required around this function expression, they should still be used as a// matter of convention to help clarify that the variable is being set to// the function&apos;s *result* and not the function itself.var counter = (function()&#123; var i = 0; return &#123; get: function()&#123; return i; &#125;, set: function( val )&#123; i = val; &#125;, increment: function() &#123; return ++i; &#125; &#125;;&#125;());// `counter` is an object with properties, which in this case happen to be// methods.counter.get(); // 0counter.set( 3 );counter.increment(); // 4counter.increment(); // 5counter.i; // undefined (`i` is not a property of the returned object)i; // ReferenceError: i is not defined (it only exists inside the closure) 参考资料 Immediately-Invoked Function Expression (IIFE)]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>Day Day Up</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[xss攻击]]></title>
+    <url>%2F2019%2F03%2F30%2Fxss%E6%94%BB%E5%87%BB%2F</url>
+    <content type="text"><![CDATA[XSS攻击 Cross Site Script，跨站脚本攻击 提交攻击脚本，嵌入到html中 在vue.js等前端框架中注入HTML[1] 使用v-html可能会导致恶意脚本注入我们的页面，如果使用v-html，要保证来自服务端的渲染数据都是安全的。 尽量使用插值表达式，它会把要显示的内容转为字符串。 防范 将用户输入转义 将&lt;,',&quot;等转义 设置白名单，黑名单，不允许含有``script` 内容安全策略（Content Security Policy，简称CSP） 限制网站中是否可以包含某来源内容 默认配置下不允许执行内联代码 123//允许本站的资源以及任意位置的图片以及 https://segmentfault.com 下的脚本。Content-Security-Policy： default-src ‘self’; img-src *;script-src https://segmentfault.com CSRF攻击[2] cross site request forgery,跨站请求伪造 攻击者盗用用户的身份信息，并以用户的名义进行发送恶意的请求 攻击防御 验证HTTP Referer字段 在HTTP头中有Referer字段，他记录该HTTP请求的来源地址 在请求地址中添加token并验证 这种的话在请求的时候加一个token，token是存入数据库之后，后台返给客户端的，如果客户端再次登录的时候，后台发现token没有，或者通过查询数据库不正确，那么就拒绝该请求 如果想防止一个账号避免在不同的机器上登录，那么我们就可以通过token来判断， 如果a机器登录后，我们就将用户的token从数据库清除，从新生成， 那么另外一台b机器在执行操作的时候，token就失效了，只能重新登录，这样就可以防止两台机器登同一账号 Vue.js中的XSS攻击 ↩ web前端攻击技术与防范 ↩]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Day Day Up</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[cookie存储购物车信息]]></title>
     <url>%2F2019%2F03%2F28%2Fcookie%E5%AD%98%E5%82%A8%E8%B4%AD%E7%89%A9%E8%BD%A6%E4%BF%A1%E6%81%AF%2F</url>
     <content type="text"><![CDATA[Cookie 直接使用document.cookie设置或者获取cookie,cookie格式为键值对 清空购物车 将购物车中内容清空并且清除cookie 清除cookie的方法是直接设置cookie的到期时间为一个早于当前时间的时间。 123var now=new Date();now.setDate(now.getDate()-7);document.cookie=&apos;cartlist=xx;expires=&apos; + now; 添加商品 window.event.target获取被点击的元素。 添加addEventListener监听点击事件，更新cookie DOM操作 tagName获取元素的标签 parentElement获取父元素 children获取所有子元素 getAttribute('data-guid')获取data-guid属性值 setAttribute('data-guid')设置data-guid属性值 nextElementSibling 返回指定元素之后的下一个兄弟元素（不包括文本节点、注释节点） location.reload() 刷新页面 向表格插入新行 12345var x=document.getElementById(&apos;myTable&apos;).insertRow(0)//insertRow参数为插到第几行 var y=x.insertCell(0) var z=x.insertCell(1) y.innerHTML=&quot;NEW CELL1&quot; z.innerHTML=&quot;NEW CELL2&quot; 插入新节点 1234var h=document.createElement(&quot;H1&quot;);//创建 &quot;H1&quot; 元素var t=document.createTextNode(&quot;Hello World&quot;);//创建一个文本节点h.appendChild(t);document.body.appendChild(h); Demo cookie和session 理解Cookie和Session机制]]></content>
@@ -8,8 +31,8 @@
         <category>开发</category>
       </categories>
       <tags>
-        <tag>开发</tag>
         <tag>javascript</tag>
+        <tag>开发</tag>
       </tags>
   </entry>
   <entry>
@@ -20,8 +43,8 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>
@@ -49,7 +72,7 @@
   <entry>
     <title><![CDATA[阅读过的文章合集]]></title>
     <url>%2F2019%2F03%2F23%2F%E9%98%85%E8%AF%BB%E8%BF%87%E7%9A%84%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86%2F</url>
-    <content type="text"><![CDATA[CSS篇 Better Layouts Through CSS Flexbox CSS flexbox的实例，实例中有的animation等也很棒 开发篇 登录那些事儿]]></content>
+    <content type="text"><![CDATA[CSS篇 Better Layouts Through CSS Flexbox CSS flexbox的实例，实例中有的animation等也很棒 浅谈 CSS 预处理器 开发篇 登录那些事儿]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -76,8 +99,8 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>
@@ -88,8 +111,8 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>Day Day Up</tag>
         <tag>javascript</tag>
+        <tag>Day Day Up</tag>
       </tags>
   </entry>
   <entry>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="html,">
+  <meta name="keywords" content="Day Day Up,">
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
-<meta name="keywords" content="html">
+<meta name="description" content="XSS攻击  Cross Site Script，跨站脚本攻击 提交攻击脚本，嵌入到html中">
+<meta name="keywords" content="Day Day Up">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器渲染">
-<meta property="og:url" content="http://yoursite.com/2019/03/02/浏览器渲染/index.html">
+<meta property="og:title" content="xss攻击">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/xss攻击/index.html">
 <meta property="og:site_name" content="RandomVar">
-<meta property="og:description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
+<meta property="og:description" content="XSS攻击  Cross Site Script，跨站脚本攻击 提交攻击脚本，嵌入到html中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png">
-<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*ROuUBS5eZ1DKk2RnFDfh6Q.png">
-<meta property="og:updated_time" content="2019-03-02T13:47:57.568Z">
+<meta property="og:updated_time" content="2019-04-01T04:15:59.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器渲染">
-<meta name="twitter:description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
-<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png">
+<meta name="twitter:title" content="xss攻击">
+<meta name="twitter:description" content="XSS攻击  Cross Site Script，跨站脚本攻击 提交攻击脚本，嵌入到html中">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/02/浏览器渲染/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/30/xss攻击/">
 
 
 
 
 
-  <title>浏览器渲染 | RandomVar</title>
+  <title>xss攻击 | RandomVar</title>
   
 
 
@@ -298,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/02/浏览器渲染/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/xss攻击/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RandomVar">
@@ -315,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浏览器渲染</h1>
+          <h1 class="post-title" itemprop="name headline">xss攻击</h1>
         
 
         <div class="post-meta">
@@ -328,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-02T20:15:18+08:00">
-                2019-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T14:07:12+08:00">
+                2019-03-30
               </time>
             
 
@@ -344,8 +341,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T21:47:57+08:00">
-                2019-03-02
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-01T12:15:59+08:00">
+                2019-04-01
               </time>
             
           </span>
@@ -363,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
                   </a>
                 </span>
 
@@ -400,131 +397,49 @@
       
 
       
-        <blockquote>
-<p>看了一篇博客，并且懒得翻译</p>
-</blockquote>
-<h2 id="解析html-css-js文件流程"><a class="header-anchor" href="#解析html-css-js文件流程"></a>解析HTML,CSS,JS文件流程</h2>
-<ol>
-<li>浏览器读取原始字节（Bytes）</li>
-</ol>
-<blockquote>
-<p>the browser reads the <strong>raw bytes</strong> of HTML from your hard disk (or network)</p>
-</blockquote>
-<ol start="2">
-<li>原始字节（Bytes） =&gt; 字符（Characters）</li>
-</ol>
-<blockquote>
-<p>Firstly, the raw bytes of data are converted into characters.</p>
-</blockquote>
-<ol start="3">
-<li>字符（Characters） =&gt; 标记（tokens）</li>
-</ol>
-<blockquote>
-<p>An html file is broken down into small units of parsing called <strong>tokens</strong>.</p>
-</blockquote>
+        <h2 id="xss攻击"><a class="header-anchor" href="#xss攻击"></a>XSS攻击</h2>
+<ul>
+<li>Cross Site Script，跨站脚本攻击</li>
+<li>提交攻击脚本，嵌入到html中</li>
+</ul>
 <a id="more"></a>
-<p><img src="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png" alt="A conceptual illustration of a token"></p>
-<ol start="4">
-<li>标记（tokens） =&gt; 节点（node）</li>
+<h4 id="在vue-js等前端框架中注入html"><a class="header-anchor" href="#在vue-js等前端框架中注入html"></a>在vue.js等前端框架中注入HTML<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h4>
+<ul>
+<li>使用v-html可能会导致恶意脚本注入我们的页面，如果使用v-html，要保证来自服务端的渲染数据都是安全的。</li>
+<li>尽量使用插值表达式，它会把要显示的内容转为字符串。</li>
+</ul>
+<h4 id="防范"><a class="header-anchor" href="#防范"></a>防范</h4>
+<ul>
+<li>将用户输入转义<br>
+将<code>&lt;</code>,<code>'</code>,<code>&quot;</code>等转义</li>
+<li>设置白名单，黑名单，不允许含有``script`</li>
+<li>内容安全策略（Content Security Policy，简称CSP） 限制网站中是否可以包含某来源内容 默认配置下不允许执行内联代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//允许本站的资源以及任意位置的图片以及 https://segmentfault.com 下的脚本。</span><br><span class="line">Content-Security-Policy： default-src ‘self’; img-src *;</span><br><span class="line">script-src https://segmentfault.com</span><br></pre></td></tr></table></figure>
+<h2 id="csrf攻击"><a class="header-anchor" href="#csrf攻击"></a>CSRF攻击<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h2>
+<ul>
+<li>cross site request forgery,跨站请求伪造</li>
+<li>攻击者盗用用户的身份信息，并以用户的名义进行发送恶意的请求</li>
+</ul>
+<h3 id="攻击防御"><a class="header-anchor" href="#攻击防御"></a>攻击防御</h3>
+<ul>
+<li>验证HTTP Referer字段<br>
+在HTTP头中有Referer字段，他记录该HTTP请求的来源地址</li>
+<li>在请求地址中添加token并验证</li>
+</ul>
+<p>这种的话在请求的时候加一个token，token是存入数据库之后，后台返给客户端的，如果客户端再次登录的时候，后台发现token没有，或者通过查询数据库不正确，那么就拒绝该请求<br>
+如果想防止一个账号避免在不同的机器上登录，那么我们就可以通过token来判断，<br>
+如果a机器登录后，我们就将用户的token从数据库清除，从新生成，<br>
+那么另外一台b机器在执行操作的时候，token就失效了，只能重新登录，这样就可以<strong>防止两台机器登同一账号</strong></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://github.com/lynnic26/LynnNote/issues/1" target="_blank" rel="noopener">Vue.js中的XSS攻击</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://segmentfault.com/a/1190000012496422" target="_blank" rel="noopener">web前端攻击技术与防范</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
 </ol>
-<blockquote>
-<p>After the tokenization is done, the tokens are then converted into nodes.</p>
-</blockquote>
-<ol start="5">
-<li>节点（node） =&gt; DOM</li>
-</ol>
-<blockquote>
-<p>The relationship between every node is established in this DOM object.</p>
-</blockquote>
-<p>对于html来说建立了DOM，而对CSS来说则有CSSOM</p>
-<blockquote>
-<p>there’s also a CSS tree structure called the CSS Object Model, CSSOM for short.</p>
-</blockquote>
-<p><img src="https://cdn-images-1.medium.com/max/1600/1*ROuUBS5eZ1DKk2RnFDfh6Q.png" alt="html解析流程"></p>
-<h2 id="加入css后的解析"><a class="header-anchor" href="#加入css后的解析"></a>加入CSS后的解析</h2>
-<ul>
-<li>当解析到css引入标签的时候，开始获取css文件</li>
-</ul>
-<blockquote>
-<p>As soon the browser begins to parse the html, upon finding a link tag to a css file, it simultaneously makes a request to fetch that.</p>
-</blockquote>
-<ul>
-<li>浏览器必须按CSS tree递归解析元素样式，因为会有一些继承父级元素的样式</li>
-</ul>
-<blockquote>
-<p>Rhe browser has to recursively go through the CSS tree structure and determine the styles that affect a particular element.</p>
-</blockquote>
-<ul>
-<li>DOM + CSSOM = render tree</li>
-</ul>
-<blockquote>
-<p>The browser now combines the DOM and CSSOM trees into something called a render tree.</p>
-</blockquote>
-<ul>
-<li>render tree是DOM + CSSOM的结果，因此如果DOM节点元素在CSS中被隐藏了，它不会出现在render tree中</li>
-</ul>
-<blockquote>
-<p>Note that if an element as been hidden by CSS e.g. by using display; none, the node will not be represented in the render tree.</p>
-<p>The hidden element will be present in the DOM but not the render tree.</p>
-</blockquote>
-<ul>
-<li>重排（reflow）<br>
-计算元素在页面的布局位置</li>
-</ul>
-<blockquote>
-<p>takes into consideration the content and style received from the DOM and CSSOM and does all the necessary layout computing.</p>
-</blockquote>
-<ul>
-<li>绘图</li>
-</ul>
-<blockquote>
-<p>“paints” the individual node to the screen.</p>
-</blockquote>
-<ul>
-<li>render blocking resources</li>
-</ul>
-<blockquote>
-<p>The DOM and CSSOM must be constructed before a successful paint, so both HTML and CSS are <strong>render blocking resources</strong>.</p>
-</blockquote>
-<ul>
-<li>DOM构建和CSS获取解析可同时进行</li>
-</ul>
-<blockquote>
-<p>As soon as the parser reaches the line with <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code> , a request is made to fetch the CSS file, style.css</p>
-<p>The DOM construction continues, and as soon as the CSS file returns with some content, the CSSOM construction begins.</p>
-</blockquote>
-<h2 id="加入javascript后的解析"><a class="header-anchor" href="#加入javascript后的解析"></a>加入JavaScript后的解析</h2>
-<ul>
-<li>遇到script标签则DOM构建暂停，直到script执行结束。因为JavaScript可以改变整个DOM和CSSOM</li>
-</ul>
-<blockquote>
-<p>Well, one of the most important things to remember is that whenever the browser encounters a script tag, the DOM construction is paused!</p>
-<p>The entire DOM construction process is halted until the script finishes executing.</p>
-<p>This is because JavaScript can alter both the DOM and CSSOM. Since the browser isn’t sure what this particular Javascript will do, it takes precaution by halting the entire DOM construction all together.</p>
-</blockquote>
-<ul>
-<li>如果js在执行过程中遇到还未建立的css元素会停下来知道CSSOM构建完毕</li>
-</ul>
-<blockquote>
-<p>So, what happens when the parser encounters a script tag but the CSSOM isn’t ready yet?</p>
-<p>The Javascript execution will be halted until the CSSOM is ready.</p>
-</blockquote>
-<ul>
-<li>可以加入async参数使得DOM的构造不会因此停下来</li>
-</ul>
-<blockquote>
-<p>If you add the async keyword to the script tag, the DOM construction will not be halted.<br>
-<code>&lt;script src=&quot;https://some-link-to-app.js&quot; async&gt;&lt;/script&gt;</code></p>
-</blockquote>
-<ul>
-<li>关键渲染路径 critical rendering path</li>
-</ul>
-<blockquote>
-<p>All this while we have discussed the steps taken between receiving the HTML, CSS and JS bytes and turning them into rendered pixels on the screen.</p>
-<p>This entire process is called the <strong>critical rendering path.</strong></p>
-</blockquote>
-<p>参考博客：<br>
-<a href="https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10" target="_blank" rel="noopener">How browser rendering works — behind the scenes</a></p>
+</section>
 
       
     </div>
@@ -542,7 +457,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"># html</a>
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
           
         </div>
       
@@ -555,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/11/js中的异步操作/" rel="next" title="js中的异步操作">
-                <i class="fa fa-chevron-left"></i> js中的异步操作
+              <a href="/2019/03/28/cookie存储购物车信息/" rel="next" title="cookie存储购物车信息">
+                <i class="fa fa-chevron-left"></i> cookie存储购物车信息
               </a>
             
           </div>
@@ -565,8 +480,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/23/阅读过的文章合集/" rel="prev" title="阅读过的文章合集">
-                阅读过的文章合集 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/31/JS立即执行函数表达式-IIFE/" rel="prev" title="JS立即执行函数表达式(IIFE)">
+                JS立即执行函数表达式(IIFE) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -701,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解析html-css-js文件流程"><span class="nav-number">1.</span> <span class="nav-text">解析HTML,CSS,JS文件流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入css后的解析"><span class="nav-number">2.</span> <span class="nav-text">加入CSS后的解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入javascript后的解析"><span class="nav-number">3.</span> <span class="nav-text">加入JavaScript后的解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#xss攻击"><span class="nav-number">1.</span> <span class="nav-text">XSS攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在vue-js等前端框架中注入html"><span class="nav-number">1.0.1.</span> <span class="nav-text">在vue.js等前端框架中注入HTML[1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防范"><span class="nav-number">1.0.2.</span> <span class="nav-text">防范</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#csrf攻击"><span class="nav-number">2.</span> <span class="nav-text">CSRF攻击[2]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#攻击防御"><span class="nav-number">2.1.</span> <span class="nav-text">攻击防御</span></a></li></ol></li></div>
             
 
           </div>

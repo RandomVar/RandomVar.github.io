@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="html,">
+  <meta name="keywords" content="javascript,Day Day Up,">
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
-<meta name="keywords" content="html">
+<meta name="description" content="引入 JavaScript可以创建一个函数的很多实例，函数的内部变量在不同的实例之中是没有关联的。 但有时候，我们不想要很多的实例，只需要执行该函数一次即可。">
+<meta name="keywords" content="javascript,Day Day Up">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器渲染">
-<meta property="og:url" content="http://yoursite.com/2019/03/02/浏览器渲染/index.html">
+<meta property="og:title" content="JS立即执行函数表达式(IIFE)">
+<meta property="og:url" content="http://yoursite.com/2019/03/31/JS立即执行函数表达式-IIFE/index.html">
 <meta property="og:site_name" content="RandomVar">
-<meta property="og:description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
+<meta property="og:description" content="引入 JavaScript可以创建一个函数的很多实例，函数的内部变量在不同的实例之中是没有关联的。 但有时候，我们不想要很多的实例，只需要执行该函数一次即可。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png">
-<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*ROuUBS5eZ1DKk2RnFDfh6Q.png">
-<meta property="og:updated_time" content="2019-03-02T13:47:57.568Z">
+<meta property="og:updated_time" content="2019-04-01T05:10:11.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器渲染">
-<meta name="twitter:description" content="看了一篇博客，并且懒得翻译  解析HTML,CSS,JS文件流程  浏览器读取原始字节（Bytes）   the browser reads the raw bytes of HTML from your hard disk (or network)   原始字节（Bytes） =&amp;gt; 字符（Characters）   Firstly, the raw bytes of data are c">
-<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png">
+<meta name="twitter:title" content="JS立即执行函数表达式(IIFE)">
+<meta name="twitter:description" content="引入 JavaScript可以创建一个函数的很多实例，函数的内部变量在不同的实例之中是没有关联的。 但有时候，我们不想要很多的实例，只需要执行该函数一次即可。">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/02/浏览器渲染/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/31/JS立即执行函数表达式-IIFE/">
 
 
 
 
 
-  <title>浏览器渲染 | RandomVar</title>
+  <title>JS立即执行函数表达式(IIFE) | RandomVar</title>
   
 
 
@@ -298,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/02/浏览器渲染/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/31/JS立即执行函数表达式-IIFE/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RandomVar">
@@ -315,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浏览器渲染</h1>
+          <h1 class="post-title" itemprop="name headline">JS立即执行函数表达式(IIFE)</h1>
         
 
         <div class="post-meta">
@@ -328,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-02T20:15:18+08:00">
-                2019-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T17:53:13+08:00">
+                2019-03-31
               </time>
             
 
@@ -344,8 +341,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T21:47:57+08:00">
-                2019-03-02
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-01T13:10:11+08:00">
+                2019-04-01
               </time>
             
           </span>
@@ -363,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -400,131 +397,47 @@
       
 
       
-        <blockquote>
-<p>看了一篇博客，并且懒得翻译</p>
-</blockquote>
-<h2 id="解析html-css-js文件流程"><a class="header-anchor" href="#解析html-css-js文件流程"></a>解析HTML,CSS,JS文件流程</h2>
-<ol>
-<li>浏览器读取原始字节（Bytes）</li>
-</ol>
-<blockquote>
-<p>the browser reads the <strong>raw bytes</strong> of HTML from your hard disk (or network)</p>
-</blockquote>
-<ol start="2">
-<li>原始字节（Bytes） =&gt; 字符（Characters）</li>
-</ol>
-<blockquote>
-<p>Firstly, the raw bytes of data are converted into characters.</p>
-</blockquote>
-<ol start="3">
-<li>字符（Characters） =&gt; 标记（tokens）</li>
-</ol>
-<blockquote>
-<p>An html file is broken down into small units of parsing called <strong>tokens</strong>.</p>
-</blockquote>
+        <h2 id="引入"><a class="header-anchor" href="#引入"></a>引入</h2>
+<p>JavaScript可以创建一个函数的很多实例，函数的内部变量在不同的实例之中是没有关联的。<br>
+但有时候，我们不想要很多的实例，只需要执行该函数一次即可。</p>
 <a id="more"></a>
-<p><img src="https://cdn-images-1.medium.com/max/1600/1*vIwWeznQhir5EPWDOyo5sw.png" alt="A conceptual illustration of a token"></p>
-<ol start="4">
-<li>标记（tokens） =&gt; 节点（node）</li>
-</ol>
-<blockquote>
-<p>After the tokenization is done, the tokens are then converted into nodes.</p>
-</blockquote>
-<ol start="5">
-<li>节点（node） =&gt; DOM</li>
-</ol>
-<blockquote>
-<p>The relationship between every node is established in this DOM object.</p>
-</blockquote>
-<p>对于html来说建立了DOM，而对CSS来说则有CSSOM</p>
-<blockquote>
-<p>there’s also a CSS tree structure called the CSS Object Model, CSSOM for short.</p>
-</blockquote>
-<p><img src="https://cdn-images-1.medium.com/max/1600/1*ROuUBS5eZ1DKk2RnFDfh6Q.png" alt="html解析流程"></p>
-<h2 id="加入css后的解析"><a class="header-anchor" href="#加入css后的解析"></a>加入CSS后的解析</h2>
+<h2 id="问题"><a class="header-anchor" href="#问题"></a>问题</h2>
 <ul>
-<li>当解析到css引入标签的时候，开始获取css文件</li>
-</ul>
+<li>我们使用<code>var foo = function(){ /* code */ }</code>定义函数，再使用<code>foo()</code>执行函数。</li>
+<li>那我们不如直接<code>function(){ /* code */ }()</code>吧？</li>
+<li>不好意思，报错<code>SyntaxError: Unexpected token (</code></li>
+<li>因为编译器看到<code>function</code>之后就把语句作为函数定义(function declaration)解析，而非函数表达式(function expression)
 <blockquote>
-<p>As soon the browser begins to parse the html, upon finding a link tag to a css file, it simultaneously makes a request to fetch that.</p>
+<p>It sees what it thinks to be a function declaration without a name and throws a SyntaxError exception because function declarations require a name.</p>
 </blockquote>
+</li>
+</ul>
+<h3 id="题外话"><a class="header-anchor" href="#题外话"></a>题外话</h3>
 <ul>
-<li>浏览器必须按CSS tree递归解析元素样式，因为会有一些继承父级元素的样式</li>
+<li><code>function foo(){ /* code */ }();</code>这么写是错的</li>
+<li><code>function foo(){ /* code */ }( 1 );</code>这么写会被当做函数定义 ，括号则被当作优先级标识，先执行括号内的内容</li>
 </ul>
-<blockquote>
-<p>Rhe browser has to recursively go through the CSS tree structure and determine the styles that affect a particular element.</p>
-</blockquote>
+<h2 id="iife"><a class="header-anchor" href="#iife"></a>IIFE</h2>
 <ul>
-<li>DOM + CSSOM = render tree</li>
+<li>
+<p>在函数外面加一个括号就会被解析为函数表达式了。<br>
+两种方法<code>(function(){ /* code */ }())</code>,<code>(function(){ /* code */ })()</code></p>
+</li>
+<li>
+<p>如果函数be expected是一个表达式，也会被解析成一个表达式,如：</p>
+</li>
 </ul>
-<blockquote>
-<p>The browser now combines the DOM and CSSOM trees into something called a render tree.</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var i = function()&#123; return 10; &#125;();</span><br><span class="line">true &amp;&amp; function()&#123; /* code */ &#125;();</span><br><span class="line">0, function()&#123; /* code */ &#125;();</span><br></pre></td></tr></table></figure>
 <ul>
-<li>render tree是DOM + CSSOM的结果，因此如果DOM节点元素在CSS中被隐藏了，它不会出现在render tree中</li>
+<li>如果函数的返回值没有用，可以直接在函数前面加个<code>!,~,-,+</code>之类的运算符，让他直接被解析为表达式，方便阅读。<br>
+比如说<code>!function(){ /* code */ }();</code></li>
 </ul>
-<blockquote>
-<p>Note that if an element as been hidden by CSS e.g. by using display; none, the node will not be represented in the render tree.</p>
-<p>The hidden element will be present in the DOM but not the render tree.</p>
-</blockquote>
-<ul>
-<li>重排（reflow）<br>
-计算元素在页面的布局位置</li>
-</ul>
-<blockquote>
-<p>takes into consideration the content and style received from the DOM and CSSOM and does all the necessary layout computing.</p>
-</blockquote>
-<ul>
-<li>绘图</li>
-</ul>
-<blockquote>
-<p>“paints” the individual node to the screen.</p>
-</blockquote>
-<ul>
-<li>render blocking resources</li>
-</ul>
-<blockquote>
-<p>The DOM and CSSOM must be constructed before a successful paint, so both HTML and CSS are <strong>render blocking resources</strong>.</p>
-</blockquote>
-<ul>
-<li>DOM构建和CSS获取解析可同时进行</li>
-</ul>
-<blockquote>
-<p>As soon as the parser reaches the line with <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code> , a request is made to fetch the CSS file, style.css</p>
-<p>The DOM construction continues, and as soon as the CSS file returns with some content, the CSSOM construction begins.</p>
-</blockquote>
-<h2 id="加入javascript后的解析"><a class="header-anchor" href="#加入javascript后的解析"></a>加入JavaScript后的解析</h2>
-<ul>
-<li>遇到script标签则DOM构建暂停，直到script执行结束。因为JavaScript可以改变整个DOM和CSSOM</li>
-</ul>
-<blockquote>
-<p>Well, one of the most important things to remember is that whenever the browser encounters a script tag, the DOM construction is paused!</p>
-<p>The entire DOM construction process is halted until the script finishes executing.</p>
-<p>This is because JavaScript can alter both the DOM and CSSOM. Since the browser isn’t sure what this particular Javascript will do, it takes precaution by halting the entire DOM construction all together.</p>
-</blockquote>
-<ul>
-<li>如果js在执行过程中遇到还未建立的css元素会停下来知道CSSOM构建完毕</li>
-</ul>
-<blockquote>
-<p>So, what happens when the parser encounters a script tag but the CSSOM isn’t ready yet?</p>
-<p>The Javascript execution will be halted until the CSSOM is ready.</p>
-</blockquote>
-<ul>
-<li>可以加入async参数使得DOM的构造不会因此停下来</li>
-</ul>
-<blockquote>
-<p>If you add the async keyword to the script tag, the DOM construction will not be halted.<br>
-<code>&lt;script src=&quot;https://some-link-to-app.js&quot; async&gt;&lt;/script&gt;</code></p>
-</blockquote>
-<ul>
-<li>关键渲染路径 critical rendering path</li>
-</ul>
-<blockquote>
-<p>All this while we have discussed the steps taken between receiving the HTML, CSS and JS bytes and turning them into rendered pixels on the screen.</p>
-<p>This entire process is called the <strong>critical rendering path.</strong></p>
-</blockquote>
-<p>参考博客：<br>
-<a href="https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10" target="_blank" rel="noopener">How browser rendering works — behind the scenes</a></p>
+<h2 id="应用-saving-state-with-closures"><a class="header-anchor" href="#应用-saving-state-with-closures"></a>应用（Saving state with closures）</h2>
+<p>使用立即执行函数可解决闭包问题。详见<a href="https://randomvar.github.io/2019/02/11/javascript%E7%9A%84%E9%97%AD%E5%8C%85%E5%92%8C%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" target="_blank" rel="noopener">javascript的闭包和回调函数</a></p>
+<h2 id="js的模块化"><a class="header-anchor" href="#js的模块化"></a>JS的模块化</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// Create an anonymous function expression that gets invoked immediately,</span><br><span class="line">// and assign its *return value* to a variable. This approach &quot;cuts out the</span><br><span class="line">// middleman&quot; of the named `makeWhatever` function reference.</span><br><span class="line">// </span><br><span class="line">// As explained in the above &quot;important note,&quot; even though parens are not</span><br><span class="line">// required around this function expression, they should still be used as a</span><br><span class="line">// matter of convention to help clarify that the variable is being set to</span><br><span class="line">// the function&apos;s *result* and not the function itself.</span><br><span class="line"></span><br><span class="line">var counter = (function()&#123;</span><br><span class="line">  var i = 0;</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    get: function()&#123;</span><br><span class="line">      return i;</span><br><span class="line">    &#125;,</span><br><span class="line">    set: function( val )&#123;</span><br><span class="line">      i = val;</span><br><span class="line">    &#125;,</span><br><span class="line">    increment: function() &#123;</span><br><span class="line">      return ++i;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line">// `counter` is an object with properties, which in this case happen to be</span><br><span class="line">// methods.</span><br><span class="line"></span><br><span class="line">counter.get(); // 0</span><br><span class="line">counter.set( 3 );</span><br><span class="line">counter.increment(); // 4</span><br><span class="line">counter.increment(); // 5</span><br><span class="line"></span><br><span class="line">counter.i; // undefined (`i` is not a property of the returned object)</span><br><span class="line">i; // ReferenceError: i is not defined (it only exists inside the closure)</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a class="header-anchor" href="#参考资料"></a>参考资料</h2>
+<p><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife" target="_blank" rel="noopener">Immediately-Invoked Function Expression (IIFE)</a></p>
 
       
     </div>
@@ -542,7 +455,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"># html</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
           
         </div>
       
@@ -555,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/11/js中的异步操作/" rel="next" title="js中的异步操作">
-                <i class="fa fa-chevron-left"></i> js中的异步操作
+              <a href="/2019/03/30/xss攻击/" rel="next" title="xss攻击">
+                <i class="fa fa-chevron-left"></i> xss攻击
               </a>
             
           </div>
@@ -564,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/23/阅读过的文章合集/" rel="prev" title="阅读过的文章合集">
-                阅读过的文章合集 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -701,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解析html-css-js文件流程"><span class="nav-number">1.</span> <span class="nav-text">解析HTML,CSS,JS文件流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入css后的解析"><span class="nav-number">2.</span> <span class="nav-text">加入CSS后的解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入javascript后的解析"><span class="nav-number">3.</span> <span class="nav-text">加入JavaScript后的解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引入"><span class="nav-number">1.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题外话"><span class="nav-number">2.1.</span> <span class="nav-text">题外话</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iife"><span class="nav-number">3.</span> <span class="nav-text">IIFE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用-saving-state-with-closures"><span class="nav-number">4.</span> <span class="nav-text">应用（Saving state with closures）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js的模块化"><span class="nav-number">5.</span> <span class="nav-text">JS的模块化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
