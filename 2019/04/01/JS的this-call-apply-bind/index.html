@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="开发,">
+  <meta name="keywords" content="javascript,Day Day Up,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="技术点 父子组件通信  通过props传递数据 子组件  12345props: &amp;#123;//需要获取的数据   width: &amp;#123;      type: Number    &amp;#125;&amp;#125;">
-<meta name="keywords" content="开发">
+<meta name="description" content="This[1]  this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象。">
+<meta name="keywords" content="javascript,Day Day Up">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仿网易云音乐图片轮播效果">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/仿网易云音乐图片轮播效果/index.html">
+<meta property="og:title" content="JS的this,call,apply,bind">
+<meta property="og:url" content="http://yoursite.com/2019/04/01/JS的this-call-apply-bind/index.html">
 <meta property="og:site_name" content="RandomVar">
-<meta property="og:description" content="技术点 父子组件通信  通过props传递数据 子组件  12345props: &amp;#123;//需要获取的数据   width: &amp;#123;      type: Number    &amp;#125;&amp;#125;">
+<meta property="og:description" content="This[1]  this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-02T01:55:52.836Z">
+<meta property="og:updated_time" content="2019-04-02T01:57:02.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仿网易云音乐图片轮播效果">
-<meta name="twitter:description" content="技术点 父子组件通信  通过props传递数据 子组件  12345props: &amp;#123;//需要获取的数据   width: &amp;#123;      type: Number    &amp;#125;&amp;#125;">
+<meta name="twitter:title" content="JS的this,call,apply,bind">
+<meta name="twitter:description" content="This[1]  this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/27/仿网易云音乐图片轮播效果/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/01/JS的this-call-apply-bind/">
 
 
 
 
 
-  <title>仿网易云音乐图片轮播效果 | RandomVar</title>
+  <title>JS的this,call,apply,bind | RandomVar</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/仿网易云音乐图片轮播效果/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/JS的this-call-apply-bind/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RandomVar">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">仿网易云音乐图片轮播效果</h1>
+          <h1 class="post-title" itemprop="name headline">JS的this,call,apply,bind</h1>
         
 
         <div class="post-meta">
@@ -325,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T09:07:45+08:00">
-                2019-03-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-01T17:54:49+08:00">
+                2019-04-01
               </time>
             
 
@@ -341,7 +341,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-02T09:55:52+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-02T09:57:02+08:00">
                 2019-04-02
               </time>
             
@@ -360,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发/" itemprop="url" rel="index">
-                    <span itemprop="name">开发</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -397,28 +397,89 @@
       
 
       
-        <h2 id="技术点"><a class="header-anchor" href="#技术点"></a>技术点</h2>
-<h3 id="父子组件通信"><a class="header-anchor" href="#父子组件通信"></a>父子组件通信</h3>
-<ul>
-<li>通过props传递数据<br>
-子组件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;//需要获取的数据</span><br><span class="line">   width: &#123;</span><br><span class="line">      type: Number</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="this"><a class="header-anchor" href="#this"></a>This<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
+<blockquote>
+<p>this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个<strong>调用它的对象</strong>。</p>
+</blockquote>
 <a id="more"></a>
-<p>父组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">   setting: &#123;</span><br><span class="line">      width: 1000</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="绝对定位"><a class="header-anchor" href="#绝对定位"></a>绝对定位</h3>
-<p>绝对定位脱离标准流，所以父元素一般要设定宽高</p>
-<h3 id="图片滤镜效果filter"><a class="header-anchor" href="#图片滤镜效果filter"></a>图片滤镜效果filter</h3>
-<p><code>filter:brightness(0.3)</code>图片变亮变暗</p>
-<h3 id="图片切换效果"><a class="header-anchor" href="#图片切换效果"></a>图片切换效果</h3>
-<p><code>transition: 500ms all ease-in-out;</code>持续时间/为所有属性设置变换效果/效果为以慢速开始和结束的过渡效果</p>
-<h3 id="bug"><a class="header-anchor" href="#bug"></a>bug</h3>
 <ul>
-<li>样式重叠,上层是透明元素,下层元素可见,但会出现无法点击的效果</li>
+<li>函数中的this没有被上一级的对象所调用，那么this指向的就是window</li>
 </ul>
-<h2 id="github地址"><a class="header-anchor" href="#github地址"></a>github地址</h2>
-<p><a href="https://github.com/RandomVar/Image-Rotation-Conponent" target="_blank" rel="noopener">https://github.com/RandomVar/Image-Rotation-Conponent</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">    var user = &quot;追梦子&quot;;</span><br><span class="line">    console.log(this.user); //undefined</span><br><span class="line">    console.log(this); //Window</span><br><span class="line">&#125;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数中的this被上一级的对象所调用，那么this指向的就是上一级的对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;</span><br><span class="line">    a:10,</span><br><span class="line">    b:&#123;</span><br><span class="line">        a:12,</span><br><span class="line">        fn:function()&#123;</span><br><span class="line">            console.log(this.a); //12</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">o.b.fn();</span><br></pre></td></tr></table></figure>
+<h3 id="new关键字"><a class="header-anchor" href="#new关键字"></a>new关键字</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Fn()&#123;</span><br><span class="line">    this.user = &quot;追梦子&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var a = new Fn();</span><br><span class="line">console.log(a.user); //追梦子</span><br></pre></td></tr></table></figure>
+<p>new关键字可以改变this的指向，将这个this指向对象a</p>
+<h3 id="当this碰到return时"><a class="header-anchor" href="#当this碰到return时"></a>当this碰到return时</h3>
+<p>如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么this还是指向函数的实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function fn()  </span><br><span class="line">&#123;  </span><br><span class="line">    this.user = &apos;追梦子&apos;;  </span><br><span class="line">    return &#123;&#125;;  </span><br><span class="line">&#125;</span><br><span class="line">var a = new fn;  </span><br><span class="line">console.log(a.user); //undefined</span><br><span class="line"></span><br><span class="line">function fn()  </span><br><span class="line">&#123;  </span><br><span class="line">    this.user = &apos;追梦子&apos;;  </span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line">var a = new fn;  </span><br><span class="line">console.log(a.user); //追梦子</span><br></pre></td></tr></table></figure>
+<h3 id="es6箭头函数中的this"><a class="header-anchor" href="#es6箭头函数中的this"></a>ES6箭头函数中的this<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h3>
+<p>箭头函数中的this在定义时绑定父执行(obj)的上下文（window）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var x=11;</span><br><span class="line">var obj=&#123;</span><br><span class="line"> x:22,</span><br><span class="line"> say:()=&gt;&#123;</span><br><span class="line">   console.log(this.x);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say();</span><br><span class="line">//输出的值为11</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a=11;</span><br><span class="line">function test2()&#123;</span><br><span class="line">  this.a=22;</span><br><span class="line">  let b=()=&gt;&#123;console.log(this.a)&#125;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line">var x=new test2();</span><br><span class="line">//输出22</span><br></pre></td></tr></table></figure>
+<h2 id="bind绑定函数"><a class="header-anchor" href="#bind绑定函数"></a>bind绑定函数<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></h2>
+<blockquote>
+<p>bind() 方法会创建一个新函数。当这个新函数被调用时，bind() 的第一个参数将作为它运行时的 this，之后的一序列参数将会在传递的实参前传入作为它的参数。</p>
+</blockquote>
+<h3 id="基本用法"><a class="header-anchor" href="#基本用法"></a>基本用法</h3>
+<ul>
+<li>用bind()创建一个函数，不论怎么调用，这个函数都有同样的 this 值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">this.x = 9;    // 在浏览器中，this指向全局的 &quot;window&quot; 对象</span><br><span class="line">var module = &#123;</span><br><span class="line">  x: 81,</span><br><span class="line">  getX: function() &#123; return this.x; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var retrieveX = module.getX;</span><br><span class="line">retrieveX();   </span><br><span class="line">// 返回9 - 因为函数是在全局作用域中调用的</span><br><span class="line"></span><br><span class="line">// 创建一个新函数，把 &apos;this&apos; 绑定到 module 对象</span><br><span class="line">var boundGetX = retrieveX.bind(module);</span><br><span class="line">boundGetX(); // 返回module函数中的x 81</span><br></pre></td></tr></table></figure>
+<ul>
+<li>bind()的第二个参数可以使一个函数拥有预设的初始参数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function list() &#123;</span><br><span class="line">  return Array.prototype.slice.call(arguments);</span><br><span class="line">&#125;</span><br><span class="line">var list1 = list(1, 2, 3); // [1, 2, 3]</span><br><span class="line">var leadingThirtysevenList = list.bind(null, 37);</span><br><span class="line">var list2 = leadingThirtysevenList(); // [37]</span><br><span class="line"></span><br><span class="line">var list3 = leadingThirtysevenList(1, 2, 3); </span><br><span class="line">// [37, 1, 2, 3]</span><br></pre></td></tr></table></figure>
+<h3 id="配合settimeout"><a class="header-anchor" href="#配合settimeout"></a>配合setTimeout</h3>
+<p>在默认情况下，使用 window.setTimeout() 时，this 关键字会指向 window （或global）对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LateBloomer.prototype.bloom = function() &#123;</span><br><span class="line">  window.setTimeout(this.declare.bind(this), 1000);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="作为构造函数使用的绑定函数"><a class="header-anchor" href="#作为构造函数使用的绑定函数"></a>作为构造函数使用的绑定函数</h3>
+<p>当一个绑定函数是用来构建(new)一个值的，第一个参数(this)就会被忽略,参数列表仍然有效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// Point is an object</span><br><span class="line">var emptyObj = &#123;&#125;;</span><br><span class="line">var YAxisPoint = Point.bind(emptyObj, 0);</span><br><span class="line">//0会到构造函数调用时的参数列表之前 YAxisPoint is a function</span><br><span class="line">var axisPoint=new YAxisPoint(5);</span><br><span class="line"></span><br><span class="line">axisPoint instanceof Point; // true</span><br><span class="line">axisPoint instanceof YAxisPoint; // true</span><br></pre></td></tr></table></figure>
+<h2 id="apply"><a class="header-anchor" href="#apply"></a>apply<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></h2>
+<blockquote>
+<p>apply()是函数的一个方法，作用是改变函数的调用对象。它的第一个参数就表示改变后的调用这个函数的对象。因此，这时this指的就是这第一个参数。</p>
+</blockquote>
+<p>apply()的参数为空时，默认调用全局对象。<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var x = 0;</span><br><span class="line">function test() &#123;</span><br><span class="line">　console.log(this.x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var obj = &#123;&#125;;</span><br><span class="line">obj.x = 1;</span><br><span class="line">obj.m = test;</span><br><span class="line">obj.m.apply() // this变为全局对象的 0</span><br><span class="line">obj.m.apply(obj); //this变为obj</span><br></pre></td></tr></table></figure>
+<ul>
+<li>apply第二个参数为参数数组</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [5, 6, 2, 3, 7];</span><br><span class="line">var max = Math.max.apply(null, numbers);</span><br><span class="line">console.log(max);</span><br></pre></td></tr></table></figure>
+<h3 id="用-apply-将数组添加到另一个数组"><a class="header-anchor" href="#用-apply-将数组添加到另一个数组"></a>用 apply 将数组添加到另一个数组</h3>
+<p>concat会创建并返回一个新数组，该方法则不会</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var array = [&apos;a&apos;, &apos;b&apos;];</span><br><span class="line">var elements = [0, 1, 2];</span><br><span class="line">array.push.apply(array, elements);</span><br></pre></td></tr></table></figure>
+<h3 id="使用apply来链接构造器"><a class="header-anchor" href="#使用apply来链接构造器"></a>使用apply来链接构造器</h3>
+<p>使你能够在构造器中使用一个类数组对象而非参数列表。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.construct = function (aArgs) &#123;</span><br><span class="line">  var oNew = Object.create(this.prototype);</span><br><span class="line">  this.apply(oNew, aArgs);</span><br><span class="line">  return oNew;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="call"><a class="header-anchor" href="#call"></a>call<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup></h2>
+<p>call和apply相似，但是第二个参数为参数列表</p>
+<h3 id="使用call方法调用父构造函数"><a class="header-anchor" href="#使用call方法调用父构造函数"></a>使用call方法调用父构造函数</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Product(name, price) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.price = price;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Food(name, price) &#123;</span><br><span class="line">  Product.call(this, name, price);</span><br><span class="line">  this.category = &apos;food&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用call方法调用匿名函数"><a class="header-anchor" href="#使用call方法调用匿名函数"></a>使用call方法调用匿名函数</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; animals.length; i++) &#123;</span><br><span class="line">  (function(i) &#123;</span><br><span class="line">    this.print = function() &#123;</span><br><span class="line">      console.log(&apos;#&apos; + i + &apos; &apos; + this.name);</span><br><span class="line">    &#125;</span><br><span class="line">    this.print();</span><br><span class="line">  &#125;).call(animals[i], i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="模拟实现"><a class="header-anchor" href="#模拟实现"></a>模拟实现</h2>
+<p><a href="https://github.com/mqyqingfeng/Blog/issues/12" target="_blank" rel="noopener">JavaScript深入之bind的模拟实现</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.cnblogs.com/pssp/p/5216085.html" target="_blank" rel="noopener">彻底理解js中this的指向</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://zhuanlan.zhihu.com/p/26475137" target="_blank" rel="noopener">深入理解ES6箭头函数中的this</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="noopener">MDN|Function.prototype.bind()</a> <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="noopener">MDN|Function.prototype.apply()</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript的this用法</a> <a href="#fnref5" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" target="_blank" rel="noopener">MDN|Function.prototype.call()</a> <a href="#fnref6" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
 
       
     </div>
@@ -436,7 +497,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/开发/" rel="tag"># 开发</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
           
         </div>
       
@@ -449,8 +512,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/25/ajax和CORS跨域/" rel="next" title="ajax和CORS跨域">
-                <i class="fa fa-chevron-left"></i> ajax和CORS跨域
+              <a href="/2019/03/31/JS立即执行函数表达式-IIFE/" rel="next" title="JS立即执行函数表达式(IIFE)">
+                <i class="fa fa-chevron-left"></i> JS立即执行函数表达式(IIFE)
               </a>
             
           </div>
@@ -459,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/27/js捕获和冒泡/" rel="prev" title="js捕获和冒泡">
-                js捕获和冒泡 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/01/JS的奇技淫巧/" rel="prev" title="JS的奇技淫巧">
+                JS的奇技淫巧 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#技术点"><span class="nav-number">1.</span> <span class="nav-text">技术点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#父子组件通信"><span class="nav-number">1.1.</span> <span class="nav-text">父子组件通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对定位"><span class="nav-number">1.2.</span> <span class="nav-text">绝对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片滤镜效果filter"><span class="nav-number">1.3.</span> <span class="nav-text">图片滤镜效果filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片切换效果"><span class="nav-number">1.4.</span> <span class="nav-text">图片切换效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bug"><span class="nav-number">1.5.</span> <span class="nav-text">bug</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github地址"><span class="nav-number">2.</span> <span class="nav-text">github地址</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-number">1.</span> <span class="nav-text">This[1]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#new关键字"><span class="nav-number">1.1.</span> <span class="nav-text">new关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当this碰到return时"><span class="nav-number">1.2.</span> <span class="nav-text">当this碰到return时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es6箭头函数中的this"><span class="nav-number">1.3.</span> <span class="nav-text">ES6箭头函数中的this[2]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bind绑定函数"><span class="nav-number">2.</span> <span class="nav-text">bind绑定函数[3]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">2.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配合settimeout"><span class="nav-number">2.2.</span> <span class="nav-text">配合setTimeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作为构造函数使用的绑定函数"><span class="nav-number">2.3.</span> <span class="nav-text">作为构造函数使用的绑定函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apply"><span class="nav-number">3.</span> <span class="nav-text">apply[4]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用-apply-将数组添加到另一个数组"><span class="nav-number">3.1.</span> <span class="nav-text">用 apply 将数组添加到另一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用apply来链接构造器"><span class="nav-number">3.2.</span> <span class="nav-text">使用apply来链接构造器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call"><span class="nav-number">4.</span> <span class="nav-text">call[6]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用call方法调用父构造函数"><span class="nav-number">4.1.</span> <span class="nav-text">使用call方法调用父构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用call方法调用匿名函数"><span class="nav-number">4.2.</span> <span class="nav-text">使用call方法调用匿名函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟实现"><span class="nav-number">5.</span> <span class="nav-text">模拟实现</span></a></li></ol></div>
             
 
           </div>
