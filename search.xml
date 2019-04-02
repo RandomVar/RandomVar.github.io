@@ -5,7 +5,7 @@
     <url>%2F2019%2F04%2F01%2FJS%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[字符串 parseInt()函数可解析一个字符串，并返回一个整数。 parseInt(str,radix)第二个参数为进制 数组 reduce()方法接收一个函数作为累加器，对数组中的每个值从左到右开始计算，将其结果汇总为单个返回值。 12345678910const array1 = [1, 2, 3, 4];const reducer = (accumulator, currentValue) =&gt; accumulator + currentValue;// 1 + 2 + 3 + 4console.log(array1.reduce(reducer));// expected output: 10// 5 + 1 + 2 + 3 + 4console.log(array1.reduce(reducer, 5));// expected output: 15 filter()方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 12345function isBigEnough(element) &#123; return element &gt;= 10;&#125;var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);// filtered is [12, 130, 44]]]></content>
       <categories>
-        <category>javscript</category>
+        <category>javascript</category>
       </categories>
       <tags>
         <tag>javascript</tag>
