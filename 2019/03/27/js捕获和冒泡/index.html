@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="RandomVar">
 <meta property="og:description" content="概念[1]   事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。   事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。   dom标准事件流的触发的先后顺序">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T15:41:49.203Z">
+<meta property="og:updated_time" content="2019-04-05T09:55:02.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js捕获和冒泡">
 <meta name="twitter:description" content="概念[1]   事件捕获（event  capturing）：通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。   事件冒泡（dubbed  bubbling）：与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。   dom标准事件流的触发的先后顺序">
@@ -341,8 +341,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T23:41:49+08:00">
-                2019-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-05T17:55:02+08:00">
+                2019-04-05
               </time>
             
           </span>
@@ -432,6 +432,11 @@ useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函
 <p>target节点 往 document 方向，冒泡前进，遇到注册的冒泡事件立即触发</p>
 </li>
 </ul>
+<h2 id="实践"><a class="header-anchor" href="#实践"></a>实践</h2>
+<h3 id="实现下拉菜单点击菜单内的元素菜单不收起-点击菜单外元素菜单收起"><a class="header-anchor" href="#实现下拉菜单点击菜单内的元素菜单不收起-点击菜单外元素菜单收起"></a>实现下拉菜单点击菜单内的元素菜单不收起，点击菜单外元素菜单收起。</h3>
+<p>在冒泡事件中给body设置菜单<code>display=none</code><br>
+在冒泡事件中给菜单设置停止冒泡<code>e.stopPropagation()</code></p>
+<p><a href="https://jsbin.com/jakuhot/1/edit?html,css,js,output" target="_blank" rel="noopener">demo</a></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -564,7 +569,7 @@ useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -586,7 +591,7 @@ useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -619,7 +624,7 @@ useCapture: 默认值是false，表示在事件冒泡阶段调用事件处理函
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念[1]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理函数"><span class="nav-number">2.</span> <span class="nav-text">事件处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addeventlistener"><span class="nav-number">2.1.</span> <span class="nav-text">addEventListener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-stoppropagation"><span class="nav-number">2.2.</span> <span class="nav-text">e.stopPropagation();</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件捕获和事件冒泡一起存在"><span class="nav-number">3.</span> <span class="nav-text">事件捕获和事件冒泡一起存在[2]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念[1]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理函数"><span class="nav-number">2.</span> <span class="nav-text">事件处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addeventlistener"><span class="nav-number">2.1.</span> <span class="nav-text">addEventListener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-stoppropagation"><span class="nav-number">2.2.</span> <span class="nav-text">e.stopPropagation();</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件捕获和事件冒泡一起存在"><span class="nav-number">3.</span> <span class="nav-text">事件捕获和事件冒泡一起存在[2]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实践"><span class="nav-number">4.</span> <span class="nav-text">实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现下拉菜单点击菜单内的元素菜单不收起-点击菜单外元素菜单收起"><span class="nav-number">4.1.</span> <span class="nav-text">实现下拉菜单点击菜单内的元素菜单不收起，点击菜单外元素菜单收起。</span></a></li></ol></li></ol></div>
             
 
           </div>
