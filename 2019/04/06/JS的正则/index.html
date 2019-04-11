@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript,Day Day Up,正则,">
+  <meta name="keywords" content="javascript,正则,Day Day Up,">
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="正则表示[1] 12345678910111213141516\d -&amp;gt; 匹配一个0-9的数字,相当于[0-9],和它相反的是\D -&amp;gt;匹配一个除了0-9的任意字符\w -&amp;gt; 匹配一个0-9、a-z、A-Z、_的数字或字符,相当于[0-9a-zA-Z_]\s -&amp;gt; 匹配一个空白字符(空格、制表符...)\b -&amp;gt; 匹配一个单词的边界\t -&amp;gt; 匹配一个制表符\n">
-<meta name="keywords" content="javascript,Day Day Up,正则">
+<meta name="keywords" content="javascript,正则,Day Day Up">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS的正则">
 <meta property="og:url" content="http://yoursite.com/2019/04/06/JS的正则/index.html">
 <meta property="og:site_name" content="RandomVar">
 <meta property="og:description" content="正则表示[1] 12345678910111213141516\d -&amp;gt; 匹配一个0-9的数字,相当于[0-9],和它相反的是\D -&amp;gt;匹配一个除了0-9的任意字符\w -&amp;gt; 匹配一个0-9、a-z、A-Z、_的数字或字符,相当于[0-9a-zA-Z_]\s -&amp;gt; 匹配一个空白字符(空格、制表符...)\b -&amp;gt; 匹配一个单词的边界\t -&amp;gt; 匹配一个制表符\n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-06T07:31:38.942Z">
+<meta property="og:updated_time" content="2019-04-11T05:20:54.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS的正则">
 <meta name="twitter:description" content="正则表示[1] 12345678910111213141516\d -&amp;gt; 匹配一个0-9的数字,相当于[0-9],和它相反的是\D -&amp;gt;匹配一个除了0-9的任意字符\w -&amp;gt; 匹配一个0-9、a-z、A-Z、_的数字或字符,相当于[0-9a-zA-Z_]\s -&amp;gt; 匹配一个空白字符(空格、制表符...)\b -&amp;gt; 匹配一个单词的边界\t -&amp;gt; 匹配一个制表符\n">
@@ -341,8 +341,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T15:31:38+08:00">
-                2019-04-06
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T13:20:54+08:00">
+                2019-04-11
               </time>
             
           </span>
@@ -401,6 +401,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\d -&gt; 匹配一个0-9的数字,相当于[0-9],和它相反的是\D -&gt;匹配一个除了0-9的任意字符</span><br><span class="line">\w -&gt; 匹配一个0-9、a-z、A-Z、_的数字或字符,相当于[0-9a-zA-Z_]</span><br><span class="line">\s -&gt; 匹配一个空白字符(空格、制表符...)</span><br><span class="line">\b -&gt; 匹配一个单词的边界</span><br><span class="line">\t -&gt; 匹配一个制表符</span><br><span class="line">\n -&gt; 匹配一个换行</span><br><span class="line">. -&gt; 匹配一个除了\n以外的任意字符</span><br><span class="line">^ -&gt; 以某一个元字符开头</span><br><span class="line">$ -&gt; 以某一个元字符结尾</span><br><span class="line">\ -&gt; 转义字符</span><br><span class="line">x|y -&gt; x或者y的一个</span><br><span class="line">[xyz] -&gt; x、y、z中的任意一个</span><br><span class="line">[^xyz] -&gt; 除了xyz中的任意一个字符</span><br><span class="line">[a-z] -&gt; 匹配a-z中的任意一个字符</span><br><span class="line">[^a-z] -&gt; 匹配除了a-z中的任意一个字符</span><br><span class="line">() -&gt; 正则中的分组</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+ : 出现一到多次</span><br><span class="line">* : 出现零到多次</span><br><span class="line">? : 出现零到一次</span><br><span class="line">&#123;n&#125; : 出现n次</span><br><span class="line">&#123;n,&#125; : 出现n到多次</span><br><span class="line">&#123;n,m&#125; : 出现n-m次</span><br><span class="line">\1: 重复和前面分组同样的内容1次</span><br></pre></td></tr></table></figure>
+<p>flags</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">g	全局</span><br><span class="line">i	不区分大小写</span><br><span class="line">m	多行</span><br><span class="line">s	.可以匹配换行符</span><br><span class="line">u	 匹配字符串的&quot;unicode&quot;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>中文的匹配为<code>[\u4e00-\u9fa5]</code>，其中<code>\u</code>是四个十六进制数字表示的Unicode字符</li>
 </ul>
@@ -478,9 +480,9 @@ exec()方法在匹配失败时返回null。</p>
           
             <a href="/tags/javascript/" rel="tag"># javascript</a>
           
-            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
-          
             <a href="/tags/正则/" rel="tag"># 正则</a>
+          
+            <a href="/tags/Day-Day-Up/" rel="tag"># Day Day Up</a>
           
         </div>
       
